@@ -15,3 +15,5 @@ You need to create a `config.json` file with the following informations:
   }
 }
 ```
+
+You need to get a **key from Wunderground** to get weather, and **a Gmail account** to send email.
