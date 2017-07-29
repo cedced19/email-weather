@@ -7,12 +7,12 @@ You need to create a `config.json` file with the following informations:
 	"key": "s2piFr2T56ZZR6zQ",
 	"state": "France",
 	"city": "Strasbourg",
-  "language": "en",
-  "to_email": "cedced19@gmail.com",
-  "gmail": {
-    "email": "cedced19-bot@gmail.com",
-    "password": "p@ssword"
-  }
+	"language": "en",
+	"to_email": "cedced19@gmail.com",
+	"gmail": {
+		"email": "cedced19-bot@gmail.com",
+		"password": "p@ssword"
+	}
 }
 ```
 
