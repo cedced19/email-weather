@@ -26,6 +26,7 @@
   "homepage": "https://github.com/cedced19/email-weather#readme",
   "dependencies": {
     "is-there": "^4.4.2",
+    "moment": "^2.18.1",
     "timed-colored-log": "0.0.0",
     "touch": "^3.1.0",
     "wunderground-api": "^1.1.4"
