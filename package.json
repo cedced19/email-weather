@@ -1,0 +1,33 @@
+{
+  "name": "email-weather",
+  "version": "0.0.0",
+  "description": "Send weather forecast by mail each day at 6am.",
+  "main": "email-weather.js",
+  "scripts": {
+    "start": "node email-weather"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cedced19/email-weather.git"
+  },
+  "keywords": [
+    "wu",
+    "weather",
+    "local",
+    "forecast",
+    "10hours",
+    "hour"
+  ],
+  "author": "Cédric JUNG <cedced19@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cedced19/email-weather/issues"
+  },
+  "homepage": "https://github.com/cedced19/email-weather#readme",
+  "dependencies": {
+    "is-there": "^4.4.2",
+    "timed-colored-log": "0.0.0",
+    "touch": "^3.1.0",
+    "wunderground-api": "^1.1.4"
+  }
+}
