@@ -19,20 +19,6 @@ if (config.language == 'fr') {
   moment.locale('fr');
 }
 
-var p1 = new Promise((resolve, reject) => {
-  client.hourly(config, function(err, data) {
-    if (err) return reject();
-    resolve(data);
-  });
-});
-
-var p2 = new Promise((resolve, reject) => {
-  client.forecast10day(config, function(err, data) {
-    if (err) return reject();
-    resolve(data);
-  });
-});
-
 var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -42,6 +28,20 @@ var transporter = nodemailer.createTransport({
 });
 
 var send = schedule.scheduleJob('0 30 6 * * *', function() {
+  var p1 = new Promise((resolve, reject) => {
+    client.hourly(config, function(err, data) {
+      if (err) return reject();
+      resolve(data);
+    });
+  });
+
+  var p2 = new Promise((resolve, reject) => {
+    client.forecast10day(config, function(err, data) {
+      if (err) return reject();
+      resolve(data);
+    });
+  });
+
   Promise.all([p1,p2])
   .catch((err) => log('Cannot connect to the api', true))
   .then((data) => {
